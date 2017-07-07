@@ -2,7 +2,7 @@ import App from './app.scss';
 import { app, todo as todoitem, indexOfObject } from './app';
 
 
-const undoMemory = [];
+let undoMemory = [];
 let currentParentElement = 0;
 
 const progress = document.getElementById('progress');
@@ -190,6 +190,7 @@ const undoFunction = () => {
   } else if (parentId === 3) {
     app.completed = [...app.completed, id];
   }
+  undoMemory = [];
   render();
 };
 
