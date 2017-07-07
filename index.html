@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="T9 Dictionary in vannila Javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="full-screen" content="yes">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Trello</title>
+  </head>
+  <body>
+    <div class="container" >
+      <div class="row" >
+        <div class="col-8-sm" >
+          <form class="col-12-sm" id="form" >
+            <input class="inputbox col-12-sm"
+                id="taskName"
+                placeholder="Type Name And Press Enter to Add Task"
+                />
+            <input type="submit"
+           style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+           tabindex="-1" />
+          </form>
+        </div>
+        <div class="col-2-sm" >
+          <div class="task" >
+            <span>Task : </span>
+            <span id="totalTask" >12</span>
+          </div>
+        </div>
+        <div class="col-2-sm" >
+          <div class="task" >
+            <button id="undo" >Undo</button>
+          </div>
+        </div>
+      </div>
+      <div class="row main-board " >
+        <div class="col-4" >
+          <div class="header" >
+            <div>To Do</div>
+            <div id="todoText" >4</div>
+          </div>
+          <div class="content" >
+            <ul id="todo"  data-parentid="1"  >
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-4" >
+          <div class="header" >
+            <div>Progress</div>
+            <div id="progressText">4</div>
+          </div>
+          <div class="content" >
+            <ul id="progress" data-parentid="2"  >
+            </ul>
+          </div>
+        </div>
+        <div class="col-4" >
+          <div class="header" >
+            <div>Completed</div>
+            <div id="completedText" >4</div>
+          </div>
+          <div class="content" >
+            <ul id="completed" data-parentid="3"  >
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
