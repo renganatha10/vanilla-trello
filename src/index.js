@@ -145,7 +145,8 @@ const render = () => {
 render();
 
 const addTodo = msg => {
-  const id = app.items[app.items.length - 1].id + 1;
+  const currentElem = app.items[app.items.length - 1];
+  const id = currentElem ? currentElem.id + 1 : 1;
   const newTodo = new todoitem(msg, id);
   app.items = [...app.items, newTodo];
   app.todo = [...app.todo, id];
